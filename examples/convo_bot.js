@@ -4,7 +4,7 @@
           \ \  __<   \ \ \/\ \  \/_/\ \/ \ \  _"-.  \ \ \  \/_/\ \/
            \ \_____\  \ \_____\    \ \_\  \ \_\ \_\  \ \_\    \ \_\
             \/_____/   \/_____/     \/_/   \/_/\/_/   \/_/     \/_/
-            
+
 
 This is a sample Slack bot built with Botkit.
 
@@ -29,17 +29,17 @@ This bot demonstrates a multi-stage conversation
   The bot will reply "What flavor of pizza do you want?"
 
   Say what flavor you want.
-  
+
   The bot will reply "Awesome" "What size do you want?"
 
   Say what size you want.
 
   The bot will reply "Ok." "So where do you want it delivered?"
-  
+
   Say where you want it delivered.
-  
+
   The bot will reply "Ok! Goodbye."
-  
+
   ...and will refrain from billing your card because this is just a demo :P
 
 # EXTEND THE BOT:
@@ -60,7 +60,7 @@ if (!process.env.token) {
 }
 
 var controller = Botkit.slackbot({
- debug: false
+ debug: true
 });
 
 controller.spawn({
@@ -89,7 +89,7 @@ askSize = function(response, convo) {
     convo.next();
   });
 }
-askWhereDeliver = function(response, convo) { 
+askWhereDeliver = function(response, convo) {
   convo.ask("So where do you want it delivered?", function(response, convo) {
     convo.say("Ok! Goodbye.");
     convo.next();
