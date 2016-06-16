@@ -65,7 +65,7 @@ var controller = Botkit.slackbot({
 });
 
 controller.spawn({
-  token: 'xoxb-33827544148-KRBnzspoi1U4a4ifEcnXFd5j'
+  token: SLACK_TOKEN
 }).startRTM((err) => {
   if (err) {
     throw new Error(err);
