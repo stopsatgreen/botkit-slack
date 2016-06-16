@@ -1,15 +1,11 @@
 name: Peter Test Bot
 description: A simple Go bot sample for Beep Boop
-avatar: images/avatar.jpg
-background: images/background.png
+avatar: peterg-bot.jpg
 config:
-  - name: SLACK_TOKEN
+  - name: ACCESS_TOKEN
     friendly_name: Slack Access Token
     info: rehabstudio team
-    default: xoxb-33827544148-0uAuJAuQUH2L1CBAc4LCPVEE
-screenshots:
-  - screenshot: images/screenshot1.png
-  - screenshot: images/screenshot2.jpg
+    default: none
 slackscopes:
   - bot
   - commands
